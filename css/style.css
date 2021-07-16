@@ -270,6 +270,15 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 
+.footer span, .footer a{
+    font-size: 1em;
+}
+.footer a{
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+
 .modal{
     height: 100%;
     width: 100%;

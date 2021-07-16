@@ -442,6 +442,11 @@ var HomePage = Vue.component("home-page", {
                 </div>
             </div>
 
+            <div class="navbar footer" v-if="mode == 'webpage'">
+                <span>&copy; {{ new Date().getFullYear() }}</span>
+                <a href="">view on github</a>
+            </div>
+
             <div class="modal" v-if="showModal">
                 <div class="content">
                     <span class="close" @click="showModal = false">&times;</span>
