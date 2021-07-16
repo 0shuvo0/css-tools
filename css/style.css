@@ -1,0 +1,231 @@
+:root{
+    --primary-color: #00a3ff;
+    --primary-bg: #1b1b1b;
+    --px: 2em;
+    --text-color: #ffff;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    padding-left: 3em;
+    padding-right: 3em;
+}
+#app{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+.navbar a{
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 2em;
+}
+.navbar .info{
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    color: var(--primary-bg);
+    opacity: 0.8;
+}
+.navbar .info:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+.input-section{
+    margin: 1em 0;
+}
+.input-section input{
+    border: none;
+    outline: none;
+    padding: .8em var(--px);
+    width: 22em;
+    border-radius: 3px;
+}
+.input-section input::placeholder{
+    color: #b6b6b6;
+}
+.input-section > span > span{
+    margin: 0 .3em;
+}
+
+
+.tabs{
+    margin-top: 2em;
+    height: 2em;
+    line-height: 2em;
+    display: flex;
+}
+.tabs .tab{
+    padding: 0 var(--px);
+    height: 100%;
+    display: inline-block;
+    color: var(--text-color);
+    text-decoration: none;
+    white-space: nowrap;
+}
+.tabs .tab.active{
+    background-color: #fff;
+    border-radius: 5px 5px 0 0;
+    color: var(--primary-color);
+}
+
+
+.main{
+    background-color: #fff;
+    border-radius: 0 10px 10px 10px;
+    display: flex;
+    align-items: center;
+    padding: var(--px) 0;
+}
+
+.main .preview{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .preview .box{
+    width: 60%;
+    padding-top: 60%;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+.main .component{
+    width: 60%;
+    box-sizing: border-box;
+    padding-right: var(--px);
+}
+
+
+.codes > p{
+    font-size: 1.2em;
+    margin-top: 2em;
+}
+.codes-box{
+    margin: .5em 0 2em 0;
+    padding: var(--px);
+    border-radius: 10px;
+    background-color: #fff;
+    color: var(--primary-bg);
+}
+.code-prop{
+	color: #FA5A00;
+}
+.code-val{
+	color: #FFB800;
+}
+
+
+.layer-ctrl{
+	color: var(--text-color);
+	background: var(--primary-bg);
+	padding: 10px 0 15px 0;
+	margin-bottom: 1em;
+	border-radius: 10px;
+    padding: 1em;
+}
+.layer-ctrl .layer-close{
+	padding: 0 15px;
+	font-size: 18px;
+	color: #FF2000;
+	text-align: right;
+}
+.layer-ctrl .layer-close:hover{
+    cursor: pointer;
+}
+
+.input-group{
+	padding: .5em 0;
+}
+.input-group label{
+    margin-bottom: .2em;
+}
+.input-group label, .input-group input{
+	display: block;
+	width: 100%;
+}
+
+.btn{
+	border: none;
+	outline: none;
+	background: var(--primary-color);
+	color: var(--text-color);
+	border-radius: 5px;
+	box-shadow: 0 0 3px #d3d3d3;
+	font-size: .8em;
+    font-weight: 500;
+	padding: 10px 12px;
+	text-transform: uppercase;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+.btn:hover{
+    box-shadow: 0 0 1px #d3d3d3;
+    cursor: pointer;
+}
+.text-right{
+    text-align: right;
+}
+
+
+.modal{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    top: 0;
+    left: 0;
+}
+
+.modal .content{
+    padding: var(--px);
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 50% auto;
+    max-width: 300px;
+    transform: translateY(-50%);
+    color: var(--primary-bg);
+    position: relative;
+    animation: pop 0.3s linear;
+}
+@keyframes pop{
+    0%{
+        opacity: 0;
+        transform: translateY(-50%) scale(0.6);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(-50%) scale(1);
+    }
+}
+.modal .content .close{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: rgb(235, 0, 0);
+}
+.modal .content .close:hover{
+    cursor: pointer;
+}
