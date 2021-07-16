@@ -70,7 +70,7 @@ body{
 
 
 input[type=range] {
-    height: 25px;
+    height: 15px;
     -webkit-appearance: none;
     margin: 10px 0;
     width: 100%;
